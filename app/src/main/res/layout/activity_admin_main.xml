@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.AdminMainActivity">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.6"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/AdminMain_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:gravity="center"
+            android:text="관리자 메인화면"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_jobList"
+            android:layout_width="126dp"
+            android:layout_height="116dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/btn_custom"
+            android:text="공고 목록"
+            android:textColor="#414746"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/P_notice"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/participant_management" />
+
+        <Button
+            android:id="@+id/participant_management"
+            android:layout_width="126dp"
+            android:layout_height="116dp"
+            android:background="@drawable/btn_custom"
+            android:text="구직자 관리"
+            android:textColor="#414746"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btn_jobList"
+            app:layout_constraintEnd_toStartOf="@+id/company_management"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline_admin"/>
+        <Button
+            android:id="@+id/company_management"
+            android:layout_width="126dp"
+            android:layout_height="116dp"
+            android:background="@drawable/btn_custom"
+            android:text="기업 관리"
+            android:textColor="#414746"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/P_notice"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/participant_management"
+            app:layout_constraintTop_toBottomOf="@id/guideline_admin"/>
+
+        <Button
+            android:id="@+id/P_notice"
+            android:layout_width="126dp"
+            android:layout_height="116dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/btn_custom"
+            android:text="공지사항"
+            android:textColor="#414746"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_jobList"
+            app:layout_constraintTop_toBottomOf="@+id/company_management" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
